@@ -1,0 +1,29 @@
+<h2>Jerarquia de Archivos</h2>
+
+src/main/java/com/tienda/pedidosonline/
+├── 📁 command/      -> Acciones a realizar con los productos
+│   ├── 📁 concretecommand/
+│   │   ├── AgregarProductoCommand.java
+│   │   └── EliminarProductoCommand.java
+│   ├── 📁 invoker/
+│   │   └── GestorDePedidos.java
+│   └── 📁 receiver/
+│   │   └── CarritoDeCompras.java
+│   └── Command.java
+├── 📁 component/    -> Productos concretos
+│   └── 📁 concretecomponent/
+│       └── ProductoBase.java -> Constructor de productos (polera, pantalon, zapatillas)
+│   └── Component.java
+├── 📁 decorator/    -> Agregados de descuentos sobre los productos
+│   ├── 📁 concretedecorator/
+│   │   ├── DescuentoCategoria.java -> Descuento a categoria Ropa
+│   │   └── DescuentoProcentaje.java -> Descuento 10% a todo
+│   └── Decorator.java
+├── 📁 model/
+│   └── RegistroCompras.java -> Gestiona archivo txt
+├── 📁 utils/
+│   └── MenuManager.java -> Gestiona textos de menu
+└── PedidosApp.java -> Clase Principal (Cliente)
+
+└── registro_compras.txt -> Archivo de persistencia de datos
+

@@ -1,0 +1,14 @@
+----- COMPRA -----
+
+Resumen del Carrito:
+# | Producto | Categoria | Precio: $ | con descuento: $
+1 | Pantalón | Ropa | $60000 | $55000
+2 | Polera | Ropa | $25000 | $20000
+
+Resumen de descuentos:
+Total sin descuentos: $85000
+Descuento aplicado en productos de Ropa: $10000
+Descuento aplicado en el total de la compra: $7500
+TOTAL A PAGAR: $67500
+------------------
+

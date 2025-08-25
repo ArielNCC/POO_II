@@ -1,0 +1,14 @@
+com\tienda\pedidosonline\model\RegistroCompras.class
+com\tienda\pedidosonline\command\concretecommand\EliminarProductoCommand.class
+com\tienda\pedidosonline\utils\MenuManager.class
+com\tienda\pedidosonline\command\Command.class
+com\tienda\pedidosonline\command\receiver\CarritoDeCompras.class
+com\tienda\pedidosonline\decorator\concretedecorator\DescuentoPorcentaje.class
+com\tienda\pedidosonline\component\concretecomponent\Camiseta.class
+com\tienda\pedidosonline\decorator\DescuentoDecorator.class
+com\tienda\pedidosonline\component\Component.class
+com\tienda\pedidosonline\command\invoker\GestorDePedidos.class
+com\tienda\pedidosonline\command\concretecommand\AgregarProductoCommand.class
+com\tienda\pedidosonline\component\concretecomponent\Zapatillas.class
+com\tienda\pedidosonline\component\concretecomponent\Pantalon.class
+com\tienda\pedidosonline\PedidosApp.class
