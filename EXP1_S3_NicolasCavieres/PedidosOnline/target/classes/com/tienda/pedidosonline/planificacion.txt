@@ -1,0 +1,89 @@
+
+Jerarquia de archivos del Sistema de Pedidos Online
+
+PedidosOnline
+└── src/
+    └── com/tienda/pedidosonline/
+        ├── command/                                // Encapsula la logica de agregar o eliminar descuentos y productos al carrito
+        │   ├── Command.java                        // Interfaz base para todos los comandos
+        │   ├── concretecommand/                    // Implementaciones concretas de comandos
+        │   │   ├── AgregarProductoCarro.java       // Comando: agrega producto al carrito
+        │   │   ├── AplicarDescuentoPorcentaje.java // Comando: aplica descuento porcentual
+        │   │   ├── AplicarDescuentoCategoria.java  // Comando: aplica descuento por categoría
+        │   │   ├── AplicarDescuentoTemporada.java  // Comando: aplica descuento por temporada
+        │   │   └── EliminarProductoCarro.java      // Comando: elimina producto del carrito
+        │   └── receiver/                           // Receptores para los comandos
+        │       └── CarritoDeCompras.java           // Receptor para operaciones del carrito
+        │
+        ├── component/                              // Patrón Component: piezas modulares (interfaz/base)
+        │   ├── Component.java                      // Interfaz base para componentes
+        │   └── concretecomponent/                  // Componentes concretos
+        │       └── ProductoBase.java               // Representa los productos y su logica de descuento base        
+        │
+        ├── controller/                             // Patrón MVC: controladores de la aplicación
+        │   ├── PedidoController.java               // Controla la lógica de pedidos
+        │   ├── ProductoController.java             // Controla la lógica de productos
+        │   └── UsuarioController.java              // Controla la lógica de usuarios
+        │
+        ├── decorator/                              // Añade descuentos y promociones
+        │   ├── DescuentoDecorator.java             // Decorador base que referencia un componente
+        │   └── concretedecorator/                  // Decoradores concretos
+        │       ├── DescuentoCategoria.java         // Decorador: descuento por categoría
+        │       ├── DescuentoPorcentaje.java        // Decorador: descuento porcentual
+        │       └── DescuentoTemporada.java         // Decorador: descuento por temporada
+        │
+        ├── model/                                  // Capa Modelo: entidades y lógica de negocio
+        │   ├── singleton/                          // Patrón Singleton
+        │   │   └── DiscountManager.java            // Gestor único de descuentos
+        │   ├── Pedido.java                         // Entidad Pedido
+        │   ├── Producto.java                       // Entidad Producto
+        │   └── Usuario.java                        // Entidad Usuario
+        │
+        ├── utils/                                  // Utilidades y gestores auxiliares
+        │   ├── MenuManager.java                    // Manejo de menús de la app
+        │   └── RegistroCompras.java                // Registro de historial de compras
+        │
+        ├── view/                                   // Vistas de la aplicación
+        │   ├── VistaCarrito.java                   // UI para el carrito de compras
+        │   ├── VistaProductos.java                 // UI para gestión de productos
+        │   └── VistaDescuentos.java                // UI para aplicar descuentos
+        │
+        ├── PedidosApp.java                         // Clase principal con método main
+        └── planificacion.txt                       // Documento de planificación del proyecto
+
+FLUJO DE LA APLICACIÓN
+--------------------
+
+1. El usuario inicia la aplicación desde PedidosApp
+2. Se presentan opciones para:
+   - Ver productos disponibles (VistaProductos)
+   - Gestionar el carrito (VistaCarrito)
+   - Aplicar descuentos (VistaDescuentos)
+   - Finalizar compra (VistaCarrito)
+
+3. Los productos se pueden decorar con diferentes descuentos:
+   - Por categoría (DescuentoCategoria)
+   - Por porcentaje (DescuentoPorcentaje)
+   - Por temporada (DescuentoTemporada)
+
+4. Las acciones principales se implementan como comandos:
+   - Agregar productos al carrito
+   - Eliminar productos del carrito
+   - Aplicar descuentos
+
+5. DiscountManager (singleton) gestiona todos los descuentos disponibles
+
+6. Al finalizar la compra, se guarda un registro en un archivo de texto
+
+EVALUACIÓN DE LOS 7 PUNTOS
+--------------------------
+
+1. ✓ Tres clases en la capa Modelo: Usuario, Producto y Pedido
+2. ✓ Singleton "DiscountManager" con constructor privado y método "getInstance()"
+3. ✓ Tres interfaces de usuario: VistaCarrito, VistaProductos, VistaDescuentos
+4. ✓ Tres controladores: PedidoController, ProductoController, UsuarioController
+5. ✓ Clase concreta ProductoBase y clase abstracta DescuentoDecorator
+6. ✓ Clases concretas que extienden Decorator: DescuentoCategoria, DescuentoPorcentaje, DescuentoTemporada
+7. ✓ Interfaz Command con método ejecutar y clases concretas: AplicarDescuentoCategoria, AplicarDescuentoPorcentaje, etc.
+
+Autor: Nicolas Cavieres

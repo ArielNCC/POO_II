@@ -1,0 +1,15 @@
+----- COMPRA -----
+ID_COMPRA: 3360030211
+Fecha: 01/09/2025
+Hora: 18:17:16
+
+Resumen del Carrito:
+# | Producto | Categoria | Precio: $ | con descuento: $
+1 | Polera | Ropa | 15000 | 10901
+
+Resumen de descuentos:
+Total sin descuentos: $15000
+Total descuentos aplicados: $4099
+TOTAL A PAGAR: $10901
+-------- FIN ----------
+
