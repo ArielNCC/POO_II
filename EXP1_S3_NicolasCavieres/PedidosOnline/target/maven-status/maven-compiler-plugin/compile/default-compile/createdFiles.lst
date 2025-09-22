@@ -1,7 +1,0 @@
-com\tienda\pedidosonline\utils\MenuManager.class
-com\tienda\pedidosonline\decorator\concretedecorator\DescuentoPorcentaje.class
-com\tienda\pedidosonline\decorator\DescuentoDecorator.class
-com\tienda\pedidosonline\PedidosApp.class
-com\tienda\pedidosonline\command\Command.class
-com\tienda\pedidosonline\command\receiver\CarritoDeCompras.class
-com\tienda\pedidosonline\component\Component.class
